@@ -15,7 +15,7 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 function Header() {
   return (
-    <header className="flex justify-between py-6">
+    <header className="flex justify-around py-6">
       <Link href="/">
         <h1 className="text-3xl">
           <span className="text-red-500">E</span>RWD.

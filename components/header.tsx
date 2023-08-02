@@ -2,10 +2,15 @@
 import Link from "next/link";
 import {
   NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
+
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 function Header() {
@@ -16,7 +21,7 @@ function Header() {
           <span className="text-red-500">E</span>RWD.
         </h1>
       </Link>
-      <nav>
+      <nav className="hidden md:block">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>

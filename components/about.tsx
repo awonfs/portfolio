@@ -3,8 +3,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 function About() {
   return (
-    <section id="about" className="flex mt-4 h-screen">
-      <div className="flex gap-4">
+    <section id="about" className="flex mt-4 h-screen ">
+      <div className="flex justify-evenly w-full gap-4">
         <div className="w-1/2 break-normal">
           <h3 className="scroll-m-20 text-5xl font-light tracking-tight">
             About <span className="text-red-500">me</span>
@@ -29,7 +29,7 @@ function About() {
             field of work to web development in the future.
           </p>
         </div>
-        <div className="flex flex-col items-center flex-1 ">
+        <div className="flex flex-col items-center">
           <Tabs defaultValue="skills" className="">
             <TabsList className="px-3">
               <TabsTrigger className="text-red-500" value="skills">

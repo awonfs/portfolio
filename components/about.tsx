@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import TabCard from "./cards/tab-card";
 
 function About() {
   return (
@@ -32,19 +33,62 @@ function About() {
         <div className="flex flex-col items-center">
           <Tabs defaultValue="skills" className="">
             <TabsList className="px-3">
-              <TabsTrigger className="text-red-500" value="skills">
+              <TabsTrigger
+                className="text-red-500 text-xl focus:text-2xl"
+                value="skills"
+              >
                 Skills
               </TabsTrigger>
-              <TabsTrigger className="text-yellow-500" value="expereience">
+              <TabsTrigger
+                className="text-yellow-500 text-xl focus:text-2xl"
+                value="expereience"
+              >
                 Experiences
               </TabsTrigger>
-              <TabsTrigger className="text-green-500" value="education">
+              <TabsTrigger
+                className="text-green-500 text-xl focus:text-2xl"
+                value="education"
+              >
                 Education
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="skills"></TabsContent>
-            <TabsContent value="expereience"></TabsContent>
-            <TabsContent value="education"></TabsContent>
+            <TabsContent value="skills">
+              <TabCard
+                title="Skills"
+                titleColor="text-red-500"
+                listWords={[
+                  "Typescript",
+                  "Next.js",
+                  "TailwindCSS",
+                  "Git",
+                  "Node.js",
+                  "Express.js",
+                  "REST",
+                  "Prisma",
+                  "PostgreSQL",
+                  "Access control systems",
+                  "CCTV",
+                  "Alarm systems",
+                ]}
+              />
+            </TabsContent>
+            <TabsContent value="expereience">
+              <TabCard
+                title="Experiences"
+                titleColor="text-yellow-500"
+                listWords={["Security system installer (2019 - present)"]}
+              />
+            </TabsContent>
+            <TabsContent value="education">
+              <TabCard
+                title="Education"
+                titleColor="text-green-500"
+                listWords={[
+                  "ICT @RPKK (2015 - 2018)",
+                  "BBA in Computer Science @HAMK (2023 - 2026)",
+                ]}
+              />
+            </TabsContent>
           </Tabs>
         </div>
       </div>

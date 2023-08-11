@@ -4,7 +4,7 @@ import TabCard from "./cards/tab-card";
 
 function About() {
   return (
-    <section id="about" className="flex mt-4 h-screen ">
+    <section id="about-me" className="flex mt-4 h-screen ">
       <div className="flex justify-evenly w-full gap-4">
         <div className="w-1/2 break-normal">
           <h3 className="scroll-m-20 text-5xl font-light tracking-tight">

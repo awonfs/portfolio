@@ -8,7 +8,7 @@ type TabCardProps = {
 
 function TabCard({ title, titleColor, listWords }: TabCardProps) {
   return (
-    <Card>
+    <Card className="min-w-[450px]">
       <CardHeader>
         <CardTitle className={titleColor}>{title}</CardTitle>
       </CardHeader>

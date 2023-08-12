@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
+
 import Image from "next/image";
 import programicon from "../assets/programicon.png";
+import ContactForm from "./contact-form";
+import twistedarrow from "../assets/twistedarrow.svg";
 
 function LandingPage() {
   return (
-    <section id="home" className="flex flex-col items-center h-5/6 mt-12 pt-8">
+    <section id="home" className="flex flex-col items-center min-h-screen mt-6">
       <div className="flex w-full justify-evenly ">
         <div className="flex flex-col gap-4 items-center">
           <h2 className="text-6xl md:text-8xl font-thin">
@@ -24,6 +27,10 @@ function LandingPage() {
             width={310}
           />
         </div>
+      </div>
+      <div className="flex items-center justify-evenly w-full">
+        <ContactForm />
+        <span>Contact me!</span>
       </div>
     </section>
   );

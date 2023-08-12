@@ -11,7 +11,7 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 function Header() {
   return (
-    <header className="flex justify-around py-6">
+    <header className="sticky top-0 z-50 bg-background flex justify-around pt-8 pb-4">
       <Link href="/">
         <h1 className="text-3xl">
           <span className="text-red-500">E</span>RWD.
@@ -21,7 +21,7 @@ function Header() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
+              <Link href="#" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Home
                 </NavigationMenuLink>

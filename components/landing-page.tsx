@@ -4,7 +4,7 @@ import programicon from "../assets/programicon.png";
 
 function LandingPage() {
   return (
-    <section id="about" className="flex flex-col items-center h-5/6 mt-12">
+    <section className="flex flex-col items-center h-5/6 -mt-2 pt-8">
       <div className="flex w-full justify-evenly ">
         <div className="flex flex-col gap-4 items-center">
           <h2 className="text-6xl md:text-8xl font-thin">

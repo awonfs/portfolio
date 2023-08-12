@@ -11,8 +11,8 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-background flex justify-around pt-8 pb-4">
-      <Link href="/">
+    <header className="sticky top-0 bg-background flex justify-around pt-8 pb-4">
+      <Link href="#home">
         <h1 className="text-3xl">
           <span className="text-red-500">E</span>RWD.
         </h1>
@@ -21,14 +21,14 @@ function Header() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="#" legacyBehavior passHref>
+              <Link href="#home" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Home
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="#about-me" legacyBehavior passHref>
+              <Link href="#about" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   About
                 </NavigationMenuLink>

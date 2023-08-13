@@ -6,7 +6,6 @@ export default function Home() {
     <main className="h-screen">
       <LandingPage />
       <About />
-      <Services />
     </main>
   );
 }

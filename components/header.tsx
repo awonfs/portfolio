@@ -1,6 +1,6 @@
 "use client";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import useFadeInWhenInView from "@/lib/hooks/useFadeInWhenInView";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -20,22 +20,7 @@ function Header() {
 
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0, // Bring to its original position
-        transition: {
-          duration: 1.5,
-        },
-      });
-    }
-  }, [controls, inView]);
+  const { controls, ref } = useFadeInWhenInView();
 
   function isMenuOpenHandler() {
     setIsMenuOpen(!isMenuOpen);

@@ -1,25 +1,9 @@
 "use client";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
+import useFadeInWhenInView from "@/lib/hooks/useFadeInWhenInView";
 
 function Portfolio() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5,
-        },
-      });
-    }
-  }, [controls, inView]);
+  const { ref, controls } = useFadeInWhenInView();
   return (
     <section
       id="portfolio"
@@ -34,15 +18,11 @@ function Portfolio() {
         animate={controls}
         className="grid grid-cols-2 gap-4 w-2/3"
       >
-        <motion.div className="col-span-2 bg-blue-500 h-20 hover:cursor-pointer">
+        <div className="col-span-2 bg-blue-500 h-20 hover:cursor-pointer">
           Top Long Div
-        </motion.div>
-        <motion.div className="col-span-1 bg-green-500 h-20">
-          Bottom Left Div
-        </motion.div>
-        <motion.div className="col-span-1 bg-red-500 h-20">
-          Bottom Right Div
-        </motion.div>
+        </div>
+        <div className="col-span-1 bg-green-500 h-20">Bottom Left Div</div>
+        <div className="col-span-1 bg-red-500 h-20">Bottom Right Div</div>
       </motion.div>
     </section>
   );

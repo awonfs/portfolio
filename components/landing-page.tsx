@@ -41,15 +41,15 @@ function LandingPage() {
             I'm a <span className="text-red-500">Full stack developer</span> /{" "}
             <span className="text-yellow-500">Security system installer</span>
           </span>
-          <div className="flex w-full relative md:mt-4">
-            <h3 className="scroll-m-20 tracking-tight font-light ml-4 text-sm md:text-2xl md:ml-10">
+          <div className="flex w-full relative md:mt-2">
+            <h3 className="scroll-m-20 tracking-tight font-light ml-4 text-sm md:text-2xl md:ml-16">
               Learn more about{" "}
               <span className="text-red-500 font-light border-b border-red-500">
                 <Link href="#about">me</Link>
               </span>{" "}
               down below
             </h3>
-            <div className="absolute right-0 top-0 md:top-2 md:right-10">
+            <div className="absolute right-0 top-0 md:top-2 md:right-6">
               <Link href="#about">
                 <CornerRightDown className="w-16 h-16 text-red-700" />
               </Link>

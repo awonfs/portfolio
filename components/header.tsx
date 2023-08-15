@@ -70,7 +70,7 @@ function Header() {
       animate={controls}
       className="flex justify-around pt-8 pb-4"
     >
-      <Link href="#home">
+      <Link href="/">
         <h1 className="text-3xl cursor-pointer">
           <span className="text-red-500">E</span>RWD.
         </h1>
@@ -85,7 +85,7 @@ function Header() {
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li onClick={closeMenu}>
-                    <Link href="#home" legacyBehavior passHref>
+                    <Link href="/" legacyBehavior passHref>
                       <NavigationMenuLink>Home</NavigationMenuLink>
                     </Link>
                   </li>

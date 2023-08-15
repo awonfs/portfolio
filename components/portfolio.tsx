@@ -25,7 +25,7 @@ function Portfolio() {
       id="portfolio"
       className="container flex items-center flex-col gap-5 h-screen pt-16 border border-red-500 border-dashed"
     >
-      <h4 className="text-start scroll-m-20 text-4xl font-light tracking-tight mb-6">
+      <h4 className="scroll-m-20 text-4xl font-light tracking-tight mb-6">
         Check out some of my work
       </h4>
       <motion.div
@@ -34,7 +34,7 @@ function Portfolio() {
         animate={controls}
         className="grid grid-cols-2 gap-4 w-2/3"
       >
-        <motion.div className="col-span-2 bg-blue-500 h-20">
+        <motion.div className="col-span-2 bg-blue-500 h-20 hover:cursor-pointer">
           Top Long Div
         </motion.div>
         <motion.div className="col-span-1 bg-green-500 h-20">

@@ -45,7 +45,7 @@ function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="sticky top-0 bg-background flex justify-around pt-8 pb-4">
+    <header className="flex justify-around pt-8 pb-4">
       <Link href="#home">
         <h1 className="text-3xl cursor-pointer">
           <span className="text-red-500">E</span>RWD.

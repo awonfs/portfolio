@@ -1,4 +1,6 @@
 "use client";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -17,6 +19,23 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuRef = useRef<HTMLDivElement>(null);
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0, // Bring to its original position
+        transition: {
+          duration: 1.5,
+        },
+      });
+    }
+  }, [controls, inView]);
 
   function isMenuOpenHandler() {
     setIsMenuOpen(!isMenuOpen);
@@ -45,7 +64,12 @@ function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="flex justify-around pt-8 pb-4">
+    <motion.header
+      ref={ref}
+      initial={{ opacity: 0, y: -5 }}
+      animate={controls}
+      className="flex justify-around pt-8 pb-4"
+    >
       <Link href="#home">
         <h1 className="text-3xl cursor-pointer">
           <span className="text-red-500">E</span>RWD.
@@ -99,23 +123,23 @@ function Header() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem className="hidden md:block">
-              <Link href="#services" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Services
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="hidden md:block">
               <Link href="#portfolio" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Portfolio
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
+            <NavigationMenuItem className="hidden md:block">
+              <Link href="#contact" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Contact
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

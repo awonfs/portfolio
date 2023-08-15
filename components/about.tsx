@@ -1,14 +1,39 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TabCard from "./cards/tab-card";
 
 function About() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+  }, [controls, inView]);
   return (
     <section
       id="about"
       className="flex flex-col md:flex-row h-screen pt-16 mt-16"
     >
-      <div className="flex flex-col md:flex-row justify-evenly w-full gap-4">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls}
+        className="flex flex-col md:flex-row justify-evenly w-full gap-4"
+      >
         <div className="w-full md:w-1/2 break-normal px-4">
           <h3 className="scroll-m-20 text-5xl font-light tracking-tight mb-4">
             About <span className="text-red-500">me</span>
@@ -97,7 +122,7 @@ function About() {
             </TabsContent>
           </Tabs>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,11 +1,12 @@
 import LandingPage from "@/components/landing-page";
 import About from "@/components/about";
-import Services from "@/components/services";
+import Portfolio from "@/components/portfolio";
 export default function Home() {
   return (
     <main className="h-screen">
       <LandingPage />
       <About />
+      <Portfolio />
     </main>
   );
 }

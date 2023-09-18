@@ -96,7 +96,7 @@ function Portfolio() {
             </span>
             <span>
               This project was a fun way to learn about Next.js app directory
-              structure and how to use the openAi API
+              and how to use the openAi API
             </span>
           </div>
         </div>

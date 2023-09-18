@@ -23,8 +23,10 @@ function About() {
             About <span className="text-red-500">me</span>
           </h3>
           <p className="leading-7 mt-6">
-            I am a 25 years old developer from Finland. I am starting my
-            bachelors degree in Computer Science this august.
+            I am a 25 years old developer from Finland. I started my studies in
+            ICT in 2015 and graduated in 2018. I am currently studying for a BBA
+            in Computer Science at HAMK. I am also working as a security system
+            installer.
           </p>
           <p className="leading-7 mt-3">
             I have been working as as security system installer for 4,5 years
@@ -33,8 +35,8 @@ function About() {
             educational institutions. My expertise lies in installing a variety
             of security systems, including access control systems, CCTV, and
             alarm systems. Beyond the technical aspects of my work, I have also
-            trained few new installers, passing on the skills and knowledge that
-            I've acquired over the years.
+            trained couple of new installers, passing on the skills and
+            knowledge that I've acquired over the years.
           </p>
           <p className="leading-7 mt-3">
             I have been interested in technology always and since early 2022 i
@@ -77,10 +79,10 @@ function About() {
                   "Express.js",
                   "REST",
                   "Prisma",
+                  "Drizzle",
                   "PostgreSQL",
-                  "Access control systems",
-                  "CCTV",
-                  "Alarm systems",
+                  "MySQL",
+                  "Sqlite",
                 ]}
               />
             </TabsContent>

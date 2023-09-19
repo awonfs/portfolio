@@ -1,8 +1,10 @@
 "use client";
-import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import useFadeInWhenInView from "@/lib/hooks/useFadeInWhenInView";
+import { Github, Linkedin } from "lucide-react";
+import { Separator } from "./ui/separator";
+import ContactForm from "./contact-form";
 
 function Contact() {
   const { ref, controls } = useFadeInWhenInView();
@@ -17,9 +19,26 @@ function Contact() {
         animate={controls}
         className=""
       >
-        <h1 className="scroll-m-20 text-xl md:text-4xl font-light tracking-tight md:mb-6">
-          Contact me
-        </h1>
+        <div className="flex flex-col text-center gap-2 ">
+          <ContactForm />
+          <div className="flex items-center gap-2 justify-center mt-4">
+            <Separator />
+            <span className="text-red-500">or </span>
+            <Separator />
+          </div>
+          <span className="block">You can also find me on </span>
+          <div className="flex gap-4 justify-center tems-center">
+            <Link target="_blank" href="https://github.com/awonfs">
+              <Github className="inline-block" size={24} />
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/in/eetu-r%C3%B6nkk%C3%B6-433289246/"
+            >
+              <Linkedin className="inline-block" size={24} />
+            </Link>
+          </div>
+        </div>
       </motion.div>
     </section>
   );

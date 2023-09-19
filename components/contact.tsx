@@ -11,7 +11,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="md:container flex items-center flex-col gap-5 h-screen pt-16 mt-32 md:mt-0"
+      className="md:container flex items-center flex-col gap-5 h-screen pt-16 md:mt-0"
     >
       <motion.div
         ref={ref}

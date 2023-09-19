@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import useFadeInWhenInView from "@/lib/hooks/useFadeInWhenInView";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import PortfolioCard from "./cards/portfolio-card";
 
 function Portfolio() {
   const GITHUB_LINKS = [
@@ -14,27 +15,27 @@ function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="container flex items-center flex-col gap-5 h-screen pt-16"
+      className="md:container flex items-center flex-col gap-5 h-screen pt-16 mt-32 md:mt-0"
     >
-      <h1 className="scroll-m-20 text-4xl font-light tracking-tight mb-6">
+      <h1 className="scroll-m-20 text-xl md:text-4xl font-light tracking-tight md:mb-6">
         Check out some of my work
       </h1>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
-        className="grid grid-cols-2 gap-4 w-5/6 "
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-5/6 "
       >
-        <div className="col-span-2 border h-40 flex gap-1 rounded ">
+        <div className="md:col-span-2 border h-40 flex gap-4 rounded px-4 md:px-0">
           <div className="flex items-center justify-evenly flex-col flex-1">
             <h2 className="text-center font-semibold text-xl">MealTracker</h2>
-            <Button className="w-1/2 bg-red-500 text-white hover:opacity-90 transition-all">
+            <Button className="w-full md:w-1/2 bg-red-500 text-white text-xs hover:opacity-90 transition-all">
               <Link target="_blank" href={GITHUB_LINKS[0]}>
                 Check out the code{" "}
               </Link>
             </Button>
           </div>
-          <div className="flex flex-col flex-1 gap-2 items-center justify-center p-6">
+          <div className="flex flex-col flex-1 gap-2 items-center justify-center md:p-6 text-xs md:text-lg">
             <span>
               A web app that allows users to track their meals on a week by week
               basis.
@@ -51,14 +52,16 @@ function Portfolio() {
         </div>
         <div className="col-span-1 border h-40 flex gap-1 rounded ">
           <div className="flex items-center justify-evenly flex-col flex-1">
-            <h2 className="text-center font-semibold text-xl">Keystone</h2>
-            <Button className="w-3/4 bg-red-500 text-white hover:opacity-90 transition-all">
+            <h2 className="text-center font-semibold text-base md:text-xl">
+              Keystone
+            </h2>
+            <Button className="w-3/4 bg-red-500 text-white text-xs hover:opacity-90 transition-all">
               <Link target="_blank" href={GITHUB_LINKS[1]}>
                 Check out the code
               </Link>
             </Button>
           </div>
-          <div className="flex flex-col flex-1 gap-2  justify-center text-sm p-4">
+          <div className="flex flex-col flex-1 gap-2  justify-center text-xs md:text-sm p-4">
             <span>
               Learn about keystone{" "}
               <Link
@@ -81,22 +84,22 @@ function Portfolio() {
         </div>
         <div className="col-span-1 border h-40 flex gap-1 rounded ">
           <div className="flex items-center justify-evenly flex-col flex-1">
-            <h2 className="text-center font-semibold text-xl">
+            <h2 className="text-center font-semibold text-base md:text-xl">
               Idea generator
             </h2>
-            <Button className="w-3/4 bg-red-500 text-white hover:opacity-90 transition-all">
-              <Link target="_blank" href={GITHUB_LINKS[2]}>
+            <Button className="w-3/4 bg-red-500 text-white text-xs hover:opacity-90 transition-all">
+              <Link target="_blank" href={GITHUB_LINKS[1]}>
                 Check out the code
               </Link>
             </Button>
           </div>
-          <div className="flex flex-col flex-1 gap-2  justify-center text-sm p-4">
+          <div className="flex flex-col flex-1 gap-2  justify-center text-xs md:text-sm p-4">
             <span>
-              Idea generator uses openAi APi to generate ideas for you to use
+              Idea generator uses the openAi api to generate ideas for you
             </span>
             <span>
-              This project was a fun way to learn about Next.js app directory
-              and how to use the openAi API
+              This project was fun way to learn about the openAi api and Next.js
+              13
             </span>
           </div>
         </div>

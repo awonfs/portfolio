@@ -1,9 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
-import useFadeInWhenInView from "@/lib/hooks/useFadeInWhenInView";
-import Link from "next/link";
 import { Button } from "./ui/button";
-import PortfolioCard from "./cards/portfolio-card";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import useFadeInWhenInView from "@/lib/hooks/useFadeInWhenInView";
 
 function Portfolio() {
   const GITHUB_LINKS = [

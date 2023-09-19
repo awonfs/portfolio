@@ -44,7 +44,7 @@ function About() {
             field of work to web development in the future.
           </p>
         </div>
-        <div className="flex flex-col items-center mt-8 md:mt-0 w-full md:w-auto">
+        <div className="flex flex-col items-center  md:mt-0 w-full md:w-auto">
           <Tabs defaultValue="skills">
             <TabsList className="px-3 flex justify-center">
               <TabsTrigger

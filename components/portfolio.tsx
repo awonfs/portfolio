@@ -98,7 +98,6 @@ function Portfolio() {
             </span>
             <span>
               This project was fun way to learn about the openAi api and Next.js
-              13
             </span>
           </div>
         </div>

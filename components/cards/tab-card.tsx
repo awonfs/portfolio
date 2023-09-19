@@ -13,7 +13,7 @@ function TabCard({ title, titleColor, listWords }: TabCardProps) {
         <CardTitle className={titleColor}>{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <ul className={title === "Skills" ? "grid grid-cols-2" : ""}>
+        <ul className={title === "Skills" ? "grid grid-cols-4" : ""}>
           {listWords.map((word) => {
             return (
               <li key={word} className="leading-7 text-center md:text-start">

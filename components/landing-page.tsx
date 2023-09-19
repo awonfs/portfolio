@@ -10,7 +10,10 @@ import Link from "next/link";
 function LandingPage() {
   const { ref, controls } = useFadeInWhenInView();
   return (
-    <section id="home" className="flex flex-col items-center min-h-screen mt-6">
+    <section
+      id="home"
+      className="flex flex-col items-center min-h-screen mt-6 "
+    >
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}

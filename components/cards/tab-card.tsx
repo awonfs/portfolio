@@ -8,19 +8,22 @@ type TabCardProps = {
 
 function TabCard({ title, titleColor, listWords }: TabCardProps) {
   return (
-    <Card className="min-w-[450px] text-center md:text-start">
+    <Card className="md:min-w-[450px] text-center md:text-start">
       <CardHeader>
         <CardTitle className={titleColor}>{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <ul
           className={
-            title === "Skills" ? "grid grid-cols-4 md:grid-cols-2" : ""
+            title === "Skills" ? "grid grid-cols-3 md:grid-cols-2" : ""
           }
         >
           {listWords.map((word) => {
             return (
-              <li key={word} className="leading-7 text-center md:text-start">
+              <li
+                key={word}
+                className="leading-7 text-center text-xs md:text-base md:text-start"
+              >
                 {word}
               </li>
             );

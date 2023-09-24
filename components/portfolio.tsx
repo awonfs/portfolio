@@ -14,7 +14,7 @@ function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="md:container flex items-center flex-col gap-5 h-screen pt-16 mt-32 md:mt-0"
+      className="md:container flex items-center flex-col gap-5 h-auto md:h-screen pt-16 mt-48 md:mt-0"
     >
       <h1 className="scroll-m-20 text-xl md:text-4xl font-light tracking-tight md:mb-6">
         Check out some of my work

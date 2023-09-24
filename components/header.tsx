@@ -17,9 +17,7 @@ import { useState, useEffect, useRef } from "react";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const menuRef = useRef<HTMLDivElement>(null);
-
   const { controls, ref } = useFadeInWhenInView();
 
   function isMenuOpenHandler() {
@@ -79,11 +77,7 @@ function Header() {
                       <NavigationMenuLink>About</NavigationMenuLink>
                     </Link>
                   </li>
-                  <li onClick={closeMenu}>
-                    <Link href="#services" legacyBehavior passHref>
-                      <NavigationMenuLink>Services</NavigationMenuLink>
-                    </Link>
-                  </li>
+
                   <li onClick={closeMenu}>
                     <Link href="#portfolio" legacyBehavior passHref>
                       <NavigationMenuLink>Portfolio</NavigationMenuLink>

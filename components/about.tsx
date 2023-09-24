@@ -10,7 +10,7 @@ function About() {
   return (
     <section
       id="about"
-      className="flex flex-col md:flex-row h-screen pt-16 mt-16"
+      className="flex flex-col md:flex-row h-auto md:h-screen pt-16 mt-16 mb-16"
     >
       <motion.div
         ref={ref}

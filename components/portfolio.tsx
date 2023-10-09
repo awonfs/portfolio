@@ -1,14 +1,16 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
-import { Button } from "./ui/button";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import useFadeInWhenInView from "@/lib/hooks/useFadeInWhenInView";
+import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 
 function Portfolio() {
   const GITHUB_LINKS = [
     "https://github.com/awonfs/mealtracker",
     "https://github.com/awonfs/keystone",
     "https://github.com/awonfs/ideas-generator",
+    "https://github.com/awonfs/symphony",
   ];
   const { ref, controls } = useFadeInWhenInView();
   return (
@@ -34,7 +36,7 @@ function Portfolio() {
               </Link>
             </Button>
           </div>
-          <div className="flex flex-col flex-1 gap-2 items-center justify-center md:p-6 text-xs md:text-lg">
+          <div className="flex flex-col flex-1 gap-2 items-start justify-center md:p-6 text-xs md:text-lg">
             <span>
               A web app that allows users to track their meals on a week by week
               basis.
@@ -98,6 +100,28 @@ function Portfolio() {
             </span>
             <span>
               This project was fun way to learn about the openAi api and Next.js
+            </span>
+          </div>
+        </div>
+        <div className="md:col-span-2 border h-40 flex gap-4 rounded px-4 md:px-0">
+          <div className="flex items-center justify-evenly flex-col flex-1">
+            <h2 className="text-center font-semibold text-xl">Symphony</h2>
+            <Button className="w-full md:w-1/2 bg-red-500 text-white text-xs hover:opacity-90 transition-all">
+              <Link target="_blank" href={GITHUB_LINKS[3]}>
+                Check out the code{" "}
+              </Link>
+            </Button>
+          </div>
+          <div className="flex flex-col flex-1 gap-2 items-start justify-center  md:p-4 text-xs md:text-lg">
+            <span>
+              With symphony you can search for your favorite artists, albums,
+              and songs.
+            </span>
+            <span>
+              The app is built with{" "}
+              <span className="text-red-500">Next.js</span>,{" "}
+              <span className="text-blue-300">TailwindCSS</span>,{" "}
+              <span className="text-green-500">Spotify API</span>
             </span>
           </div>
         </div>

@@ -112,7 +112,7 @@ function Portfolio() {
               </Link>
             </Button>
           </div>
-          <div className="flex flex-col flex-1 gap-2 items-start justify-center  md:p-4 text-xs md:text-lg">
+          <div className="flex flex-col flex-1 gap-2 items-start justify-center md:p-4 text-xs md:text-lg">
             <span>
               With symphony you can search for your favorite artists, albums,
               and songs.
@@ -120,7 +120,7 @@ function Portfolio() {
             <span>
               The app is built with{" "}
               <span className="text-red-500">Next.js</span>,{" "}
-              <span className="text-blue-300">TailwindCSS</span>,{" "}
+              <span className="text-blue-300">TailwindCSS</span> and{" "}
               <span className="text-green-500">Spotify API</span>
             </span>
           </div>
